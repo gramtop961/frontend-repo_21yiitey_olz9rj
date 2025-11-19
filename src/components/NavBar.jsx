@@ -62,7 +62,17 @@ export default function NavBar() {
               {item.label}
             </a>
           ))}
-          <a href="#resume" className="px-4 py-2 rounded-lg neon-btn text-sm" data-magnet="16">Resume</a>
+          <a
+            href="https://drive.google.com/file/d/1SleOJtfqaddBP_2wR-AKz6Umex-ldyGR/view?usp=sharing"
+            className="px-4 py-2 rounded-lg neon-btn text-sm"
+            data-magnet="16"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Open resume in a new tab"
+            title="Open Resume"
+          >
+            Resume
+          </a>
         </nav>
       </div>
     </div>
