@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap');
+
 @layer base {
   :root {
     --bg: #0a0a0a;
@@ -75,4 +78,5 @@
   .card-3d { transform-style: preserve-3d; perspective: 1000px; }
   .tilt:hover { transform: translateY(-4px) rotateX(1.2deg) rotateY(-1.2deg); transition: transform .35s ease; }
   .scanlines { background-image: linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px); background-size: 100% 6px; }
+  .mono { font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace; letter-spacing: 0.01em; }
 }

@@ -25,7 +25,7 @@ export default function Experience() {
   ]
 
   return (
-    <section className="px-6 md:px-10 py-16" style={{background:'#0a0a0a'}}>
+    <section id="experience" className="px-6 md:px-10 py-16" style={{background:'#0a0a0a'}}>
       <div className="max-w-6xl mx-auto">
         <h2 className="text-2xl md:text-3xl font-bold text-white mb-8">Experience</h2>
         <div className="relative pl-8">

@@ -83,28 +83,28 @@ export default function Hero() {
             View Projects
           </a>
           <a
-            href="/resume.pdf"
-            className="inline-flex items-center justify-center px-5 py-3 rounded-lg font-semibold border border-white/20 text-white hover:bg-white/5 transition"
-            download
+            href="https://drive.google.com/file/d/1SleOJtfqaddBP_2wR-AKz6Umex-ldyGR/view?usp=sharing"
+            className="inline-flex items-center justify-center px-5 py-3 rounded-lg font-semibold border border-white/20 text-white hover:bg-white/5 transition mono"
+            target="_blank" rel="noreferrer"
           >
-            Download Resume
+            View Resume
           </a>
         </div>
 
         <div className="mt-14 grid md:grid-cols-2 gap-4">
           <div className="glass glass-hover rounded-xl p-4 md:p-6 scanlines">
-            <div className="text-xs text-white/50 mb-2">terminal</div>
-            <div className="font-mono text-base md:text-lg text-[#46b3ff]">
+            <div className="text-xs text-white/50 mb-2 mono">terminal</div>
+            <div className="mono text-base md:text-lg text-[#46b3ff]">
               {'>'} {typed}
               <span className="inline-block w-3 h-5 bg-[#46b3ff] ml-1 align-middle animate-pulse" style={{boxShadow:'0 0 12px #46b3ff'}} />
             </div>
-            <div className="mt-2 text-xs md:text-sm text-white/50">Python {'>'} SQL {'>'} React</div>
+            <div className="mt-2 text-xs md:text-sm text-white/50 mono">Python {'>'} SQL {'>'} React</div>
           </div>
 
           <div className="glass glass-hover rounded-xl p-4 md:p-6 card-3d tilt">
-            <div className="text-sm text-white/60">Now building</div>
+            <div className="text-sm text-white/60 mono">Now building</div>
             <div className="mt-2 text-white text-xl font-semibold">Conversational Analytics Agents</div>
-            <div className="mt-2 text-white/60 text-sm">NL → SQL • Guardrails • Postgres • LangChain</div>
+            <div className="mt-2 text-white/60 text-sm mono">NL → SQL • Guardrails • Postgres • LangChain</div>
             <div className="mt-4 h-24 rounded-lg bg-[radial-gradient(circle_at_30%_30%,rgba(70,179,255,.35),transparent_55%),radial-gradient(circle_at_70%_70%,rgba(70,179,255,.15),transparent_60%)] border border-white/10 floating" />
           </div>
         </div>
