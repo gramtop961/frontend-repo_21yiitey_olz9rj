@@ -4,9 +4,9 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
         <p className="text-sm text-white/60">Built by an Engineer, Driven by Data.</p>
         <div className="flex items-center gap-5 text-sm">
-          <a className="hover:text-[#46b3ff] transition" href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
-          <a className="hover:text-[#46b3ff] transition" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
-          <a className="hover:text-[#46b3ff] transition" href="mailto:syedasrarzahoor@example.com">Email</a>
+          <a className="hover:text-[#46b3ff] transition" href="https://github.com/syedasrar00" target="_blank" rel="noreferrer">GitHub</a>
+          <a className="hover:text-[#46b3ff] transition" href="https://www.linkedin.com/in/syed-asrar-zahoor" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a className="hover:text-[#46b3ff] transition" href="mailto:syedasrar00@outlook.com">Email</a>
         </div>
       </div>
     </footer>

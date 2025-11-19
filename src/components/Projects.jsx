@@ -1,4 +1,4 @@
-const ProjectCard = ({ title, description, image }) => {
+const ProjectCard = ({ title, description, stack, link }) => {
   return (
     <div className="group rounded-2xl border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] transition overflow-hidden">
       <div className="aspect-[16/9] bg-gradient-to-br from-white/5 to-white/10 flex items-center justify-center">
@@ -7,10 +7,15 @@ const ProjectCard = ({ title, description, image }) => {
       <div className="p-5 md:p-6">
         <h3 className="text-xl md:text-2xl font-semibold text-white">{title}</h3>
         <p className="mt-2 text-white/70 text-sm md:text-base">{description}</p>
-        {image && (
-          <div className="mt-4 rounded-lg overflow-hidden border border-white/10">
-            <img src={image} alt={title} className="w-full" />
+        {stack && (
+          <div className="mt-3 flex flex-wrap gap-2">
+            {stack.map((s) => (
+              <span key={s} className="px-2 py-1 rounded-md text-xs border border-white/10 text-white/70 bg-white/5">{s}</span>
+            ))}
           </div>
+        )}
+        {link && (
+          <a href={link} target="_blank" rel="noreferrer" className="inline-block mt-4 text-sm font-semibold text-[#46b3ff] hover:underline">View Project</a>
         )}
       </div>
     </div>
@@ -24,16 +29,19 @@ export default function Projects() {
         <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">Featured Projects</h2>
         <div className="grid md:grid-cols-3 gap-4 md:gap-6">
           <ProjectCard
-            title="Automated ETL Data Pipeline"
-            description="A robust Python-based ingestion system handling network retries, idempotent SQL UPSERTS, and complex data parsing for large-scale datasets."
+            title="AI-Powered Heart Sound Classification"
+            description="Two-stage pipeline on raw, unfiltered audio delivering 98% F1-Score, surpassing published benchmarks. Deployed as a real-time Streamlit app."
+            stack={["Python","Scikit-learn","Signal Processing","Streamlit"]}
           />
           <ProjectCard
-            title="AI-Powered Heart Sound Analysis"
-            description="State-of-the-art medical diagnostic tool achieving 98% F1-Score using custom audio feature engineering."
+            title="AI Bottle Image Classifier"
+            description="Vision system to detect, classify, and count beverage bottles with real-time UI for upload and results."
+            stack={["YOLOv5","Python","Flask","React"]}
           />
           <ProjectCard
-            title="Natural Language to SQL Engine"
-            description="Enterprise chatbot converting human questions into executed SQL queries, democratizing data access."
+            title="Natural Language → SQL Assistant"
+            description="Conversational analytics agent translating questions into parameterized SQL with guardrails for safety."
+            stack={["LangChain","OpenAI API","PostgreSQL","Flask/Spring Boot"]}
           />
         </div>
       </div>

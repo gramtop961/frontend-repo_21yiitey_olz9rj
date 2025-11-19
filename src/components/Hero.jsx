@@ -62,12 +62,12 @@ export default function Hero() {
         <div className="mb-10">
           <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium tracking-wide bg-white/5 border border-white/10 text-white/70">
             <span className="w-1.5 h-1.5 rounded-full bg-[#46b3ff] animate-pulse" />
-            Senior Software Engineer • Data Engineering • AI • Full Stack
+            AI/ML • Data Engineering • Full Stack
           </span>
         </div>
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.05]">Syed Asrar Zahoor.</h1>
         <p className="mt-6 text-lg md:text-xl text-white/70 max-w-3xl">
-          Bridging the gap between Data Science, Enterprise Engineering, and Scalable Architecture.
+          AI/ML engineer with strong data and product sense. I architect reliable pipelines and ship intelligent applications end‑to‑end.
         </p>
 
         <div className="mt-10 grid gap-4 sm:flex">
