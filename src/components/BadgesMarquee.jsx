@@ -28,9 +28,11 @@ export default function BadgesMarquee() {
 
   return (
     <div className="px-6 md:px-10" style={{ background: '#0a0a0a' }}>
-      <div ref={ref} className="max-w-6xl mx-auto overflow-x-auto whitespace-nowrap scrollbar-hide py-4 border-y border-white/10">
+      <div className="max-w-6xl mx-auto overflow-x-auto whitespace-nowrap scrollbar-hide py-4 border-y border-white/10 edge-fade">
         {logos.concat(logos).map((l, i) => (
-          <span key={i} className="inline-block mx-3 px-3 py-1 rounded-full text-xs md:text-sm border border-white/10 text-white/70 bg-white/5">{l}</span>
+          <span key={i} className="inline-block mx-3 px-3 py-1 rounded-full text-xs md:text-sm border border-white/10 text-white/70 bg-white/5 glass-hover">
+            <span className="shine bg-clip-text text-transparent" style={{WebkitTextFillColor:'transparent'}}>{l}</span>
+          </span>
         ))}
       </div>
     </div>

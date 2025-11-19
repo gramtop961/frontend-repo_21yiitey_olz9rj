@@ -11,7 +11,14 @@ import Footer from './components/Footer'
 
 function App() {
   return (
-    <div className="min-h-screen" style={{background:'#0a0a0a'}}>
+    <div className="min-h-screen relative" style={{background:'#0a0a0a'}}>
+      {/* Futuristic global background layers */}
+      <div className="site-bg">
+        <div className="bg-aurora" />
+        <div className="bg-grid" />
+        <div className="bg-noise" />
+      </div>
+
       <Hero />
       <BadgesMarquee />
       <StackGrid />

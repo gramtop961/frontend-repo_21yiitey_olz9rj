@@ -4,43 +4,75 @@
 
 @layer base {
   :root {
-    --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    --font-geist: 'Geist', system-ui, sans-serif;
-    --font-geist-mono: 'Geist Mono', monospace;
-    --font-mona: 'Mona Sans', system-ui, sans-serif;
-    --font-ibm-plex: 'IBM Plex Sans', system-ui, sans-serif;
-    --font-manrope: 'Manrope', system-ui, sans-serif;
+    --bg: #0a0a0a;
+    --fg: #f5f5f5;
+    --muted: rgba(255,255,255,0.65);
+    --card: rgba(255,255,255,0.06);
+    --card-hover: rgba(255,255,255,0.1);
+    --stroke: rgba(255,255,255,0.12);
+    --electric: #46b3ff;
   }
 
-  html {
-    font-family: var(--font-sans);
-    font-feature-settings: "rlig" 1, "calt" 1;
-  }
-
-  body {
-    @apply antialiased;
-  }
+  html { font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+  body { @apply antialiased; background: var(--bg); color: var(--fg); }
 }
 
-/* Custom utility classes for shadcn/ui patterns */
-@layer utilities {
-  .animate-in {
-    animation-name: animateIn;
-    animation-duration: 350ms;
-    --tw-enter-opacity: initial;
-    --tw-enter-scale: initial;
-    --tw-enter-rotate: initial;
-    --tw-enter-translate-x: initial;
-    --tw-enter-translate-y: initial;
+/* Futuristic background layers */
+@layer components {
+  .site-bg { position: fixed; inset: 0; pointer-events: none; z-index: -10; }
+  .bg-grid {
+    position: absolute; inset: 0; opacity: 0.2;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px);
+    background-size: 40px 40px, 40px 40px;
+    mask-image: radial-gradient(60% 60% at 50% 40%, #000 50%, transparent 90%);
+  }
+  .bg-aurora {
+    position: absolute; inset: -20% -10% -10% -10%; filter: blur(50px); opacity: 0.55;
+    background:
+      conic-gradient(from 220deg, rgba(70,179,255,0.25), rgba(168,85,247,0.18), rgba(14,165,233,0.22), rgba(70,179,255,0.25));
+    animation: drift 18s linear infinite;
+  }
+  .bg-noise {
+    position: absolute; inset: 0; opacity: .03; mix-blend-mode: overlay; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)'/%3E%3C/svg%3E");
   }
 
-  .animate-out {
-    animation-name: animateOut;
-    animation-duration: 350ms;
-    --tw-exit-opacity: initial;
-    --tw-exit-scale: initial;
-    --tw-exit-rotate: initial;
-    --tw-exit-translate-x: initial;
-    --tw-exit-translate-y: initial;
+  .glass {
+    background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04));
+    border: 1px solid var(--stroke);
+    backdrop-filter: blur(6px);
   }
+  .glass-hover { transition: all .35s ease; }
+  .glass-hover:hover { background: var(--card-hover); box-shadow: 0 0 0 1px rgba(70,179,255,.35), 0 20px 60px -20px rgba(70,179,255,.25); }
+
+  .neon-btn {
+    position: relative; isolation: isolate;
+    background: var(--electric); color: #0a0a0a; font-weight: 700;
+    border-radius: .75rem; box-shadow: 0 0 20px rgba(70,179,255,.45);
+  }
+  .neon-btn::after {
+    content: ""; position: absolute; inset: 0; border-radius: inherit; z-index: -1;
+    background: radial-gradient(60% 60% at 50% 40%, rgba(70,179,255,.5), transparent 60%);
+    filter: blur(16px); opacity: .7;
+  }
+
+  .edge-fade {
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+    mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+  }
+
+  .floating { animation: float 6s ease-in-out infinite; }
+  .shine { background: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,.25), rgba(255,255,255,0)); background-size: 200% 100%; animation: shine 3.2s linear infinite; }
+}
+
+@keyframes drift { from { transform: translateY(-3%) rotate(0deg); } to { transform: translateY(3%) rotate(360deg); } }
+@keyframes float { 0%,100% { transform: translateY(0px); } 50% { transform: translateY(-8px); } }
+@keyframes shine { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+
+/* Utility tweaks */
+@layer utilities {
+  .card-3d { transform-style: preserve-3d; perspective: 1000px; }
+  .tilt:hover { transform: translateY(-4px) rotateX(1.2deg) rotateY(-1.2deg); transition: transform .35s ease; }
+  .scanlines { background-image: linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px); background-size: 100% 6px; }
 }

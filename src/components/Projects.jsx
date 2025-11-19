@@ -1,8 +1,9 @@
 const ProjectCard = ({ title, description, stack, link }) => {
   return (
-    <div className="group rounded-2xl border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] transition overflow-hidden">
-      <div className="aspect-[16/9] bg-gradient-to-br from-white/5 to-white/10 flex items-center justify-center">
-        <div className="w-4/5 h-2/3 rounded-xl bg-[radial-gradient(circle_at_30%_30%,rgba(70,179,255,0.35),transparent_55%),radial-gradient(circle_at_70%_70%,rgba(70,179,255,0.15),transparent_60%)] border border-white/10" />
+    <div className="group rounded-2xl glass glass-hover overflow-hidden">
+      <div className="relative aspect-[16/9] bg-gradient-to-br from-white/5 to-white/10 flex items-center justify-center">
+        <div className="w-4/5 h-2/3 rounded-xl bg-[radial-gradient(circle_at_30%_30%,rgba(70,179,255,0.35),transparent_55%),radial-gradient(circle_at_70%_70%,rgba(70,179,255,0.15),transparent_60%)] border border-white/10 floating" />
+        <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition" style={{boxShadow:'inset 0 0 0 1px rgba(70,179,255,.35)'}} />
       </div>
       <div className="p-5 md:p-6">
         <h3 className="text-xl md:text-2xl font-semibold text-white">{title}</h3>

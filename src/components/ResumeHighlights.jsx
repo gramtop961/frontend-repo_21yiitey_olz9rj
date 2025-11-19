@@ -11,7 +11,7 @@ export default function ResumeHighlights() {
       <div className="max-w-6xl mx-auto">
         <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">Impact Highlights</h2>
         <div className="grid md:grid-cols-2 gap-6">
-          <div className="bg-white/[0.03] border border-white/10 rounded-xl p-6 space-y-3">
+          <div className="glass glass-hover rounded-xl p-6 space-y-3">
             <h3 className="text-white text-lg md:text-xl font-semibold">Enhancesys Innovations • Data Scientist</h3>
             <ul className="space-y-2">
               <Bullet>Built a LangChain + OpenAI chatbot that converts natural language to SQL, unlocking self‑serve analytics for non‑technical teams.</Bullet>
@@ -21,7 +21,7 @@ export default function ResumeHighlights() {
               <Bullet>Automated weekly reporting with Python, saving 10+ hours each week.</Bullet>
             </ul>
           </div>
-          <div className="bg-white/[0.03] border border-white/10 rounded-xl p-6 space-y-3">
+          <div className="glass glass-hover rounded-xl p-6 space-y-3">
             <h3 className="text-white text-lg md:text-xl font-semibold">PrepForTech • Full Stack Intern</h3>
             <ul className="space-y-2">
               <Bullet>Shipped two production web apps end‑to‑end in an Agile team with Java, Spring Boot, and React.</Bullet>

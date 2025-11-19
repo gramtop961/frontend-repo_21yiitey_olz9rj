@@ -1,5 +1,5 @@
 const EduItem = ({ degree, school, period, coursework }) => (
-  <div className="bg-white/[0.03] border border-white/10 rounded-xl p-5">
+  <div className="glass glass-hover rounded-xl p-5">
     <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
       <h3 className="text-white text-lg md:text-xl font-semibold">{degree} • {school}</h3>
       <span className="text-white/50 text-sm">{period}</span>
@@ -37,7 +37,7 @@ export default function EducationCerts() {
             />
           </div>
           <div className="space-y-4">
-            <div className="bg-white/[0.03] border border-white/10 rounded-xl p-5">
+            <div className="glass glass-hover rounded-xl p-5">
               <h3 className="text-white text-lg md:text-xl font-semibold mb-3">Certifications</h3>
               <div className="flex flex-wrap gap-2">
                 <CertItem name="Google Data Analytics Professional Certificate" />

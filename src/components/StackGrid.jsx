@@ -1,6 +1,6 @@
 const Card = ({ title, subtitle, tags }) => {
   return (
-    <div className="group relative rounded-2xl border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] transition p-5 md:p-6">
+    <div className="group relative rounded-2xl glass glass-hover p-5 md:p-6 card-3d tilt">
       <div className="absolute inset-0 rounded-2xl pointer-events-none opacity-0 group-hover:opacity-100 transition" style={{
         boxShadow: 'inset 0 0 0 1px rgba(70,179,255,0.35), 0 0 30px rgba(70,179,255,0.12)'
       }} />

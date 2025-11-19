@@ -5,7 +5,7 @@ const Badge = ({ children }) => (
 )
 
 const SkillBlock = ({ title, items }) => (
-  <div className="group rounded-2xl border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] transition p-5 md:p-6">
+  <div className="group rounded-2xl glass glass-hover p-5 md:p-6">
     <h3 className="text-lg md:text-xl font-semibold text-white">{title}</h3>
     <div className="mt-3 flex flex-wrap gap-2">
       {items.map((it) => (

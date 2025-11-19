@@ -33,7 +33,7 @@ export default function Experience() {
           {items.map((it, idx) => (
             <div key={idx} className="relative mb-8">
               <div className="absolute -left-[7px] top-1 w-3 h-3 rounded-full" style={{background:'#46b3ff', boxShadow:'0 0 8px #46b3ff'}} />
-              <div className="bg-white/[0.03] border border-white/10 rounded-xl p-5">
+              <div className="glass glass-hover rounded-xl p-5">
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
                   <div>
                     <h3 className="text-white text-lg md:text-xl font-semibold">{it.role} • {it.company}</h3>
